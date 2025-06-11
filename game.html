@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concrete Mixing Minigame</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style2.css"/>
+</head>
+<body>
+
+    <!-- DIVIDER -->
+    <div class="container">
+        <h1>Concrete Mixing Minigame</h1>
+        <p class="game-description">
+            Create the perfect concrete mix by adding ingredients!<br>
+            Try different ratios of aggregate, sand, water, and coconut coir to see what results you get.
+        </p><br>
+        <p id="tips">Tips: A lot of aggregate, some sand, a little amount of water and coir</p>
+        
+        <div class="ingredients">
+            <button id="aggregate-btn" class="ingredient-btn">
+                <i class="fas fa-cubes"></i>
+                Aggregate
+            </button>
+            <button id="sand-btn" class="ingredient-btn">
+                <i class="fas fa-mountain"></i>
+                Sand
+            </button>
+            <button id="water-btn" class="ingredient-btn">
+                <i class="fas fa-tint"></i>
+                Water
+            </button>
+            <button id="coir-btn" class="ingredient-btn">
+                <i class="fas fa-leaf"></i>
+                Coconut Coir
+            </button>
+        </div>
+        
+        <div class="mix-display">
+            <div class="mix-ratios">
+                <div>
+                    <div class="ratio-bar">
+                        <div id="aggregate-fill" class="ratio-fill"></div>
+                    </div>
+                    <div class="ratio-label">Agg</div>
+                </div>
+                <div>
+                    <div class="ratio-bar">
+                        <div id="sand-fill" class="ratio-fill"></div>
+                    </div>
+                    <div class="ratio-label">Sand</div>
+                </div>
+                <div>
+                    <div class="ratio-bar">
+                        <div id="water-fill" class="ratio-fill"></div>
+                    </div>
+                    <div class="ratio-label">Water</div>
+                </div>
+                <div>
+                    <div class="ratio-bar">
+                        <div id="coir-fill" class="ratio-fill"></div>
+                    </div>
+                    <div class="ratio-label">Coir</div>
+                </div>
+            </div>
+            
+            <div class="result">
+                <div id="result-message" class="result-message"></div>
+                <img id="result-image" class="result-image" src="" alt="Result">
+            </div>
+        </div>
+        
+        <div class="action-btns">
+            <button id="mix-btn" class="action-btn">
+                <i class="fas fa-blender"></i> Mix Concrete
+            </button>
+            <button id="reset-btn" class="action-btn">
+                <i class="fas fa-redo"></i> Reset
+            </button>
+            <button id="back-btn" class="action-btn" onclick="location.href='index.html'">
+                <i class="fas fa-home"></i> Back
+            </button>
+        </div>
+    </div>
+    
+    <!-- Modal for perfect mix -->
+    <div id="perfect-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Perfect Mix!</h2>
+            <p>You've created the ideal concrete with coconut coir reinforcement!</p>
+            <img class="modal-image" src="images/Brick.jpg" alt="Perfect Concrete">
+            <p>This mix has excellent compressive strength, tensile strength, and water resistance thanks to the perfect balance of materials.</p>
+        </div>
+    </div>
+    
+    <script src="main2.js"></script>
+</body>
+</html>
